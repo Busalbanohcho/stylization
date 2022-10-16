@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body style="border:5px solid black ">
+<form style="padding: 30px;background-color: #9fecec; line-height: 1.5"
+      class="barber_form"
+      method="POST"
+      name="zayavka"
+      action="/zayavka.php"
+>
+    <p class="caption" style="font-size: 40px; color: red; text-align: center">Записаться онлайн</p>
+
+    <div class="infofield" style="font-family: cursive;color: #014901; font-size: 30px">Тип стрижки:</div>
+    <select name="service_type" style="border: 3px solid #090808;background-color: #f6f5f5">
+        <option>Стрижка</option>
+        <option>Стрижка бороды</option>
+        <option selected="selected">Стрижка + Борода</option>
+    </select>
+
+    <div class="infofield" style="font-family: cursive;font-size: 30px;color: #014901">Уровень специалиста:</div>
+    <label><input type="radio" name="master" value="1"/>Стажер</label>
+    <label
+    ><input
+            type="radio"
+            name="master"
+            value="2"
+            checked="checked"
+    />Барбер</label
+    >
+    <label><input type="radio" name="master" value="3"/>VIP Барбер</label>
+
+    <div class="infofield" style="font-family: cursive;font-size: 30px;color: #014901">Дополнительные услуги:</div>
+    <label><input type="checkbox" name="massage"/> Массаж головы</label>
+    <label><input type="checkbox" name="razor"/> Опасная бритва</label>
+
+    <div class="infofield" style="font-family: cursive;font-size: 30px;color: #014901">Дата и время записи:</div>
+    <input style="border: 3px solid #030303" type="datetime-local" name="date_time"/>
+
+    <fieldset style="border: 3px solid #014901; margin-top: 15px">
+        <legend style="font-family: cursive;font-size: 30px;color: #014901; border: 5px double #014901;">Контактная
+            информация
+        </legend>
+        <div class="infofield" style="font-family: cursive;font-size: 15px;color: #014901">Ваше имя:</div>
+        <input style="border: 3px solid #030303" type="text" name="name" placeholder="введите ваше имя"/>
+
+        <div class="infofield" style="font-family: cursive;font-size: 15px;color: #014901">Ваш телефон:</div>
+        <input style="border: 3px solid #030303"
+                type="tel"
+                name="phone"
+                placeholder="например, +7 800 123-45-67"
+        />
+    </fieldset>
+
+    <input style="margin-top: 10px; border: 3px solid #030303" type="submit" name="zayavka_submit" value="Записаться"/>
+</form>
+</body>
+</html>

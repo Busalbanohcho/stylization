@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    body {
+        background-color: #eeeae7;
+        padding: 20px;
+        border: 3px solid #5e5959;
+        line-height: 2;
+        width: 850px;
+        margin-left: 20%;
+    }
+    .caption {
+        font-size: 60px;
+        font-family: Gabriola;
+        color: #ff0000;
+        text-align: center;
+    }
+    .infofield {
+        font-family: cursive;
+        font-size: 30px;
+
+    }
+    select {
+        border: 2px solid saddlebrown;
+        background-color: aquamarine;
+
+    }
+    input {
+        border: 4px double darkslategray;
+        font-size: 20px;
+
+    }
+    legend{
+        border: 5px double #090808;
+    }
+    fieldset{
+        border: 5px double #030303;
+        margin-top: 15px;
+    }
+    .zapis{
+        margin-top: 15px;
+    }
+</style>
+<body>
+<form
+        class="barber_form"
+        method="POST"
+        name="zayavka"
+        action="/zayavka.php"
+>
+    <p class="caption">Записаться онлайн</p>
+
+    <div class="infofield">Тип стрижки:</div>
+    <select name="service_type">
+        <option>Стрижка</option>
+        <option>Стрижка бороды</option>
+        <option selected="selected">Стрижка + Борода</option>
+    </select>
+
+    <div class="infofield">Уровень специалиста:</div>
+    <label><input type="radio" name="master" value="1" />Стажер</label>
+    <label
+    ><input
+            type="radio"
+            name="master"
+            value="2"
+            checked="checked"
+    />Барбер</label
+    >
+    <label><input type="radio" name="master" value="3" />VIP Барбер</label>
+
+    <div class="infofield">Дополнительные услуги:</div>
+    <label><input type="checkbox" name="massage" /> Массаж головы</label>
+    <label><input type="checkbox" name="razor" /> Опасная бритва</label>
+
+    <div class="infofield">Дата и время записи:</div>
+    <input  type="datetime-local" name="date_time" />
+
+    <fieldset>
+        <legend>Контактная информация</legend>
+        <div class="infofield">Ваше имя:</div>
+        <input type="text" name="name" placeholder="введите ваше имя" />
+
+        <div class="infofield">Ваш телефон:</div>
+        <input
+                type="tel"
+                name="phone"
+                placeholder="например, +7 800 123-45-67"
+        />
+    </fieldset>
+
+    <input class="zapis" type="submit" name="zayavka_submit" value="Записаться" />
+</form>
+</body>
+</html>
